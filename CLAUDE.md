@@ -52,3 +52,30 @@ Managed in `requirements.txt` with pinned versions. Install inside the venv:
 ```bash
 venv\Scripts\pip install -r requirements.txt
 ```
+
+## GitHub Repository
+
+Repository: https://github.com/iscarelli/brazilian-stock-dashboard
+
+Git is configured with `origin` pointing to the repo above. The `gh` CLI is installed at `C:\Program Files\GitHub CLI\gh.exe` and authenticated as `iscarelli`.
+
+### Auto-sync to GitHub
+
+A background watcher (`sync_github.py`) detects file changes and automatically commits + pushes to GitHub.
+
+```bash
+# Start the watcher (keep it running in a separate terminal)
+py sync_github.py
+```
+
+- Watches `.py`, `.txt`, and `.md` files (excludes `venv/`, `__pycache__/`, `.git/`)
+- Waits 5 seconds after the last change before committing (debounce)
+- Commit message format: `Auto-sync: YYYY-MM-DD HH:MM:SS`
+
+To push manually:
+
+```bash
+git add .
+git commit -m "your message"
+git push
+```
