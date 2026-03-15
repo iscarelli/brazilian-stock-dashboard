@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Auto-sync GitHub",
+      "type": "shell",
+      "command": "venv\\Scripts\\python.exe sync_github.py",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated",
+        "label": "GitHub Sync"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
