@@ -16,7 +16,7 @@ from data import (
 
 # ── Page config ────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="B3 Dashboard 2025",
+    page_title="B3 Ismael Dashboard 2025",
     page_icon="📈",
     layout="wide",
 )
